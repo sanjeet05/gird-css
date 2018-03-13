@@ -1,0 +1,65 @@
+
+/*=============================
+  default grid set up -> mobile first
+  Note: layout settings
+===============================*/
+body {
+  display: grid;
+  min-height: 100vh;
+  min-width: 100%;
+  grid-template-rows: 1fr 90px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "content"
+                       "footer";
+}
+
+.main {
+  background-color: #2c3e50;
+  grid-area: content;
+  color: #fff;
+}
+
+.footer {
+  background-color: #c0392b;
+  grid-area: footer;
+}
+
+.aside {
+  background-color: #7f8c8d;
+  grid-area: sidebar;
+}
+
+/* container settings */
+
+.main_container {  
+  display: grid;  
+  min-width: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+.main_item_1 {
+  grid-column: 1 / span 6;
+}
+.main_item_2 {
+  grid-column: 7 / span 6;
+}
+.main_item_3 {
+  grid-column: 1 / span 13;
+}
+.main_item_4 {
+  
+}
+
+
+/*=============================
+larger screens
+===============================*/
+
+@media only screen and (min-width:600px) {
+  body {
+    grid-template-columns: 40px 1fr;    
+    grid-template-areas: "sidebar  content"
+                         "footer  footer";
+  }
+}
+
