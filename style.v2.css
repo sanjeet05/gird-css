@@ -1,0 +1,162 @@
+
+/*=============================
+  default grid set up -> mobile first
+  Note: layout settings
+===============================*/
+body {
+  display: grid;
+  min-height: 100vh;
+  min-width: 100%;
+  grid-template-rows: 1fr 90px;
+  grid-template-columns: 40px 1fr;   
+  grid-template-areas: "sidebar content" "footer footer";                       
+}
+
+.main {
+  background-color: #2c3e50;
+  grid-area: content;
+  color: #fff;
+}
+
+.footer {
+  background-color: #c0392b;
+  grid-area: footer;
+}
+
+.aside {
+  background-color: #7f8c8d;
+  grid-area: sidebar;
+}
+
+/* container settings */
+
+.gc_container {  
+  display: grid;  
+  min-width: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+.gc_item {
+  grid-column: auto / span 12;
+}
+.gc_span1{
+  grid-column: auto / span 1;
+}
+.gc_span2{
+  grid-column: auto / span 2;
+}
+.gc_span3{
+  grid-column: auto / span 3;
+}
+.gc_span4{
+  grid-column: auto / span 4;
+}
+.gc_span5{
+  grid-column: auto / span 5;
+}
+.gc_span6{
+  grid-column: auto / span 6;
+}
+.gc_span7{
+  grid-column: auto / span 7;
+}
+.gc_span8{
+  grid-column: auto / span 8;
+}
+.gc_span9{
+  grid-column: auto / span 9;
+}
+.gc_span10{
+  grid-column: auto / span 10;
+}
+.gc_span11{
+  grid-column: auto / span 11;
+}
+.gc_span12{
+  grid-column: auto / span 12;
+}
+
+.gc_row_start {
+  justify-self: start;
+}
+.gc_row_end {
+  justify-self: end;
+}
+.gc_row_center {
+  justify-self: center;
+}
+.gc_row_stretch {
+  justify-self: stretch;
+}
+
+.gc_col_start {
+  align-self: start;
+}
+.gc_col_end {
+  align-self: end;
+}
+.gc_col_center {
+  align-self: center;
+}
+.gc_col_stretch {
+  align-self: stretch;
+}
+
+gc_center {
+  justify-self: center;
+  align-self: center;
+}
+
+/*=============================
+media queries
+===============================*/
+
+/* Landscape phones and portrait tablets */
+@media only screen and (max-width: 767px) {
+  body {
+    grid-template-columns: 1fr;  
+    grid-template-areas: "content" "footer";
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media only screen and (max-width: 991px){
+  .gc_span1{
+    grid-column: auto / span 12;
+  }
+  .gc_span2{
+    grid-column: auto / span 12;
+  }
+  .gc_span3{
+    grid-column: auto / span 12;
+  }
+  .gc_span4{
+    grid-column: auto / span 12;
+  }
+  .gc_span5{
+    grid-column: auto / span 12;
+  }
+  .gc_span6{
+    grid-column: auto / span 12;
+  }
+  .gc_span7{
+    grid-column: auto / span 12;
+  }
+  .gc_span8{
+    grid-column: auto / span 12;
+  }
+  .gc_span9{
+    grid-column: auto / span 12;
+  }
+  .gc_span10{
+    grid-column: auto / span 12;
+  }
+  .gc_span11{
+    grid-column: auto / span 12;
+  }
+  .gc_span12{
+    grid-column: auto / span 12;
+  }
+  
+}
+
